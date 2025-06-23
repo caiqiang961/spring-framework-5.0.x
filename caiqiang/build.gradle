@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.0.18.BUILD-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile(project(":spring-context"))
+    compile(project(":spring-core"))
+    compile(project(":spring-aop"))
+    compile(project(":spring-web"))
+    compile(project(":spring-webmvc"))
+    compile(project(":spring-tx"))
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:8.5.45'
+
+}
